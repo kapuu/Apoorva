@@ -1,1 +1,30 @@
-Hello world
+
+#Array & ArrayList Program 
+
+import java.util.ArrayList;
+
+public class Array {
+
+	public static void main(String args[])
+	{
+		String[] fruits = new String[3];
+		fruits[0] = "Mango";
+		fruits[1] = "Apple";
+		fruits[2] = "Strawberry";
+		
+		System.out.println(fruits[1]);
+		
+		ArrayList fruitlist = new ArrayList();
+		fruitlist.add("Pineapple");
+		fruitlist.add("coconut");
+		System.out.println(fruitlist);
+		fruitlist.remove("coconut");
+		System.out.println(fruitlist);
+		System.out.println(fruitlist.contains("Pineapple"));
+		fruitlist.clear();
+		System.out.println(fruitlist);
+		System.out.println(fruitlist.contains("Pineapple"));
+		
+	}
+}
+
