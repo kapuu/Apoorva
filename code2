@@ -1,1 +1,63 @@
-Hello
+public class RollGame
+{
+    public static void main (String[] args) {
+	    RollGame newGame = new RollGame();
+	    newGame.start();
+}
+	
+	
+	public void start(){
+	    
+	    int a[]={0,1,2};
+	    
+	    int i=0;
+	    
+	    double numberOfGames=2;
+	    System.out.println("Checking\n");
+	    
+	    for(int x=0;x<=numberOfGames;x++){
+	    System.out.println("The game starts now!keep rolling the die until we get 2");
+	    
+	    while(a[i]!=2){
+	        a[i]++;
+	    }
+	    
+	    System.out.println("Print the value  i: "+ i);
+	    System.out.println("Print the value a[i]: "+ a[i]);
+	    System.out.println("The game has ended because you have rolled a as "+  a[i]);
+	    a[i]=0;
+	    System.out.println("Print the value a[i]: "+a[i]);
+	    System.out.println("\n");
+	    
+	    }
+	    
+	}
+	
+}
+
+
+Results:
+
+Checking
+
+The game starts now!keep rolling the die until we get 2
+Print the value  i: 0
+Print the value a[i]: 2
+The game has ended because you have rolled a as 2
+Print the value a[i]: 0
+
+
+The game starts now!keep rolling the die until we get 2
+Print the value  i: 0
+Print the value a[i]: 2
+The game has ended because you have rolled a as 2
+Print the value a[i]: 0
+
+
+The game starts now!keep rolling the die until we get 2
+Print the value  i: 0
+Print the value a[i]: 2
+The game has ended because you have rolled a as 2
+Print the value a[i]: 0
+
+
