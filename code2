@@ -20,6 +20,7 @@ public class RollGame
 	    
 	    while(a[i]!=2){
 	        a[i]++;
+	          System.out.println("printed two times: Because after the condition is false it gets out of while loop i,e a[i] is 0,1");
 	    }
 	    
 	    System.out.println("Print the value  i: "+ i);
@@ -31,16 +32,19 @@ public class RollGame
 	    
 	    }
 	    
+	      
+	      System.out.println("Printed after the for loop condition is false i,e 0,1,2");
 	}
 	
 }
-
 
 Results:
 
 Checking
 
 The game starts now!keep rolling the die until we get 2
+printed two times: Because after the condition is false it gets out of while loop i,e a[i] is 0,1
+printed two times: Because after the condition is false it gets out of while loop i,e a[i] is 0,1
 Print the value  i: 0
 Print the value a[i]: 2
 The game has ended because you have rolled a as 2
@@ -48,6 +52,8 @@ Print the value a[i]: 0
 
 
 The game starts now!keep rolling the die until we get 2
+printed two times: Because after the condition is false it gets out of while loop i,e a[i] is 0,1
+printed two times: Because after the condition is false it gets out of while loop i,e a[i] is 0,1
 Print the value  i: 0
 Print the value a[i]: 2
 The game has ended because you have rolled a as 2
@@ -55,9 +61,12 @@ Print the value a[i]: 0
 
 
 The game starts now!keep rolling the die until we get 2
+printed two times: Because after the condition is false it gets out of while loop i,e a[i] is 0,1
+printed two times: Because after the condition is false it gets out of while loop i,e a[i] is 0,1
 Print the value  i: 0
 Print the value a[i]: 2
 The game has ended because you have rolled a as 2
 Print the value a[i]: 0
 
 
+Printed after the for loop condition is false i,e 0,1,2
