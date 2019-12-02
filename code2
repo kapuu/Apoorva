@@ -70,3 +70,52 @@ Print the value a[i]: 0
 
 
 Printed after the for loop condition is false i,e 0,1,2
+
+//Code 2
+
+
+public class Dice{
+    int dicevalue;
+    public int roll(){
+        dicevalue = ((int)(Math.random()*6))+1;
+        return(dicevalue);
+    }
+     
+    
+    public static void main(String[] args){
+        Dice[] a=new Dice[2];
+        a[0] =new Dice();
+        System.out.println(a[0].roll());
+
+    
+}
+}
+
+
+//code 3
+
+public class Dice{
+    int dicevalue;
+    public int roll(){
+        dicevalue = ((int)(Math.random()*6))+1;
+        return(dicevalue);
+    }
+     
+    
+    public static void main(String[] args){
+        Dice[] a=new Dice[2];
+        a[0] =new Dice();
+        //System.out.println(a[0].roll());
+        
+        while(a[0].roll()!=2){
+           System.out.println(a[0].dicevalue);
+        }
+           System.out.println("\n");
+           System.out.println(a[0].dicevalue);
+    
+}
+}
+   
+
+
+
