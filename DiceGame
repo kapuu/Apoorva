@@ -1,6 +1,5 @@
-// The Dice Game, the user has to roll the dice until he gets 2
+// The Dice Game, the user has to roll the dice until he gets the dive value as 2
 
-//code 3
 
 public class Dice{
     int dicevalue;
