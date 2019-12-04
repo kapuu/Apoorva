@@ -78,3 +78,73 @@ Result:
 ***
 ****
 *****
+
+
+//Code 5
+
+public class Test{
+
+	
+	
+	public static void main(String[] args) {
+          for(int i=5; i> 0;i--) {
+        	  for(int j=0; j<i;j++) {
+        		  System.out.print("*");
+        	  }
+        	     System.out.println();
+          }
+		
+	}
+}
+
+Result:
+*****
+****
+***
+**
+*
+
+//CODE 6
+public class Test{
+	
+	static String[]   colors = {"A", "B", "C"};
+
+	public static void main(String[] args) {
+		for(int i=0;i<=2;i++) {
+		System.out.println(colors[i]);
+	}
+	}
+}
+
+Result:
+A
+B
+C
+
+//CODE 7
+
+
+public class Test{
+	static String[][] fancycolors= {{"Red", "yellow", "Green"}, 
+			                      {"Apple", "Banana", "Gauva"}};
+	
+	
+	public static void main(String[] args) {
+
+	 for(int row=0;row<2;row++) {
+		 for(int column=0;column<3;column++) {
+			 System.out.println(fancycolors[row][column]);
+		 }
+		 
+	 }
+    
+}
+}
+
+Result:
+Red
+yellow
+Green
+Apple
+Banana
+Gauva
