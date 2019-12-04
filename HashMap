@@ -1,0 +1,30 @@
+public class Hashmap{
+  public static void main(String[] args){
+  HashMap<String, Integer> box1= new HashMap<String, Integer>();
+  box1.put("a", 10);
+  box1.put("b", 20);
+  box1.put("c", 30);
+  
+  System.out.println(box1);
+  System.out.println(box1.get("c"));
+  System.out.println(box1.containsValue(10));
+  System.out.println(box1.replace("a", 50));
+  System.out.println(box1);
+  System.out.println(box1.values());
+  System.out.println(box1.keySet());
+ }
+ 
+ }
+ 
+ Results:
+ {a=10, b=20, c=30}
+ 30
+ true
+{a=50, b=20, c=30}
+{a=50, b=20, c=30}
+[50, 20, 30]
+[a,b,c]
+
+
+
+   
