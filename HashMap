@@ -16,15 +16,15 @@ public class Hashmap{
  
  }
  
- Results:
- {a=10, b=20, c=30}
- 30
- true
-{a=50, b=20, c=30}
+Results:
+{a=10, b=20, c=30}
+30
+true
+3
+10
 {a=50, b=20, c=30}
 [50, 20, 30]
-[a,b,c]
-
+[a, b, c]
 
 
    
