@@ -1,22 +1,56 @@
-public class Hashmap{
-  public static void main(String[] args){
-  HashMap<String, Integer> box1= new HashMap<String, Integer>();
-  box1.put("a", 10);
-  box1.put("b", 20);
-  box1.put("c", 30);
-  
-  System.out.println(box1);
-  System.out.println(box1.get("c"));
-  System.out.println(box1.containsValue(10));
-  System.out.println(box1.replace("a", 50));
-  System.out.println(box1);
-  System.out.println(box1.values());
-  System.out.println(box1.keySet());
- }
- 
- }
- 
-Results:
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
+
+public class Hashmap {
+	
+	public static void main(String[] args) {
+		HashMap<String, Integer> box1= new HashMap<String, Integer>() ;
+		box1.put("a", 10);
+		box1.put("b", 20);
+		box1.put("c", 30);
+
+        //FOR LOOP
+        System.out.println("For Loop:");
+        
+        for (Map.Entry me : box1.entrySet()) {
+          System.out.println("Key: "+me.getKey() + " & Value: " + me.getValue());
+        }
+
+        //WHILE LOOP & ITERATOR
+        System.out.println("While Loop:");
+        Iterator iterator = box1.entrySet().iterator();
+        while (iterator.hasNext()) {
+             Map.Entry me2 = (Map.Entry) iterator.next();
+          System.out.println("Key: "+me2.getKey() + " & Value: " + me2.getValue());
+        }
+	
+          
+		/*System.out.println(box1);
+		System.out.println(box1.get("c"));
+		System.out.println(box1.containsValue(10));
+		System.out.println(box1.size());
+		System.out.println(box1.replace("a",50));
+		System.out.println(box1);
+		System.out.println(box1.values());
+		System.out.println(box1.keySet());
+		*/
+		
+	
+	}
+
+}
+
+
+Result:
+For Loop:
+Key: a & Value: 10
+Key: b & Value: 20
+Key: c & Value: 30
+While Loop:
+Key: a & Value: 10
+Key: b & Value: 20
+Key: c & Value: 30
 {a=10, b=20, c=30}
 30
 true
@@ -25,6 +59,3 @@ true
 {a=50, b=20, c=30}
 [50, 20, 30]
 [a, b, c]
-
-
-   
