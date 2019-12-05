@@ -1,0 +1,65 @@
+//Code 1
+
+interface interface1
+{
+	void show();
+}
+
+interface interface2
+{
+	void display();
+}
+
+
+class class1 implements interface1,interface2
+{
+	public void show() {
+		System.out.println("Method1");
+	}
+	
+	public void display() {
+		System.out.println("Method2");
+	}
+}
+
+public class Test {
+	public static void main(String[] args) {
+		interface1 obj1 = new class1();
+		class1 obj2 =new class1();
+		obj1.show();
+		obj2.show();
+		
+		interface2 obj3 = new class1();
+		class1 obj4 =new class1();
+		obj3.display();
+		obj4.display();
+		
+	}
+}
+
+Result:
+
+Method1
+Method1
+Method2
+Method2
+
+//Code 2
+interface interface1
+{
+	void show();
+}
+
+
+public class Test {
+	public static void main(String[] args) {
+        interface1 obj1=() ->
+        {
+        	System.out.println("In show");
+        };
+        obj1.show();
+	}
+}
+
+Result:
+In show
