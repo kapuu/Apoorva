@@ -1,0 +1,116 @@
+
+public abstract class abstractclass {
+	
+	String eName;
+	String eAddress;
+	int eID;
+	
+	abstractclass(String eName,String eAddress,int eID){
+		this.eName=eName;
+		this.eAddress=eAddress;
+		this.eID=eID;
+	}
+	
+	public void department() {
+		System.out.println("This employee works for Marketing Department");
+	}
+	
+	public abstract void JobRole();
+	
+
+}
+
+
+
+public class ExtendAbstract extends abstractclass {
+	
+	ExtendAbstract(String eName,String eAddress,int eID){
+		super(eName,eAddress,eID);
+	}
+
+	public void JobRole() {
+		System.out.println("This is an abstract method");
+	}
+	
+	public static void main(String[] args) {
+		ExtendAbstract e=new ExtendAbstract("Apoorva", "XYZ", 1001);
+		e.department();
+		e.JobRole();
+	}
+}
+
+
+Result:
+This employee works for Marketing Department
+This is an abstract method
+
+/********************/HAS-A relation ship
+
+class Name{
+	String FirstName;
+	String MiddleName;
+	String LastName;
+
+	public Name(String fname, String mname, String lname){
+	this.FirstName = fname;
+	this.MiddleName = mname;
+	this.LastName= lname;
+	}
+}
+
+public class EmployeeExam{
+	int age;
+	Name n;
+	public void display(int age, Name n){
+	System.out.println("Age:" +age);
+	System.out.println("Full Name:"+ n.FirstName+n.MiddleName+n.LastName);
+}
+
+
+public static void main(String[] args){
+	EmployeeExam e= new EmployeeExam();
+        Name n = new Name("App","K","k");
+ 	e.display(50,n);
+}
+}
+
+/********/ Instance of Keyword
+
+interface Person{}
+class Employee implements Person{}
+public class Science_Teacher extends Employee{
+public static void main(String[] args) {
+	Employee e=new Employee();
+	Science_Teacher s=new Science_Teacher();
+	System.out.println(e instanceof person);
+        System.out.println(s instanceof Employee);
+	System.out.println(s instanceof Person);
+}
+}
+
+/***********/Overloading
+
+public class Overloading{
+	int c;
+	public void addition(){
+	int a=10,b=20;
+	System.out.println("Sum of a and b:" +(a+b));
+	}
+
+	public void addition(int a, int b){
+	System.out.println(a+b);
+	}
+
+	public int addition(int a, int b,int c){
+	return(a+b+c);
+	}
+    
+        public static void main(String[] args) {
+	Overloading obj=new Overloading();
+	obj.addition();
+	obj.addition(10,20);
+	int ret=obj.addition(10,20,30);
+	System.out.println(ret);
+	}
+}
+
