@@ -26,7 +26,9 @@ XML:(Head):
 	xsi:schemaLocation="http://www.springframework.org/schema/beans  
   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 </beans>
-For class:
+
+****************************************************************************************************************************************
+For class:(Set and Get)
 package ProductPackage;
 public class ProductInfo {
 	int Id;
@@ -47,6 +49,7 @@ public class ProductInfo {
 		System.out.println("ID:"+Id+" "+"Name"+Name);
 	}
 }
+***************************************************************************************************************************************
 
 XML(Body):For set and get methods:
 <bean id="productBean" class="ProductPackage.ProductInfo"> 
@@ -54,6 +57,107 @@ XML(Body):For set and get methods:
   <property name="Name" value="Redmi"></property> 
 </bean>
 
+****************************************************************************************************************************************
+For Class:(Constructors)
+public class ProductInfo {
+	int Id,;
+	String Name;
+	
+	public ProductInfo(int Id,String Name)
+	{
+		super();
+		this.id = id;
+		this.name = name;
+	}
 
+	public void display() {
+		System.out.println("ID:"+Id+" "+"Name"+Name);
+	}
+}
+****************************************************************************************************************************************
 
+XML(Body): For Constructor:
+<bean id="productBean" class="ProductPackage.ProductInfo">
+<constructor-arg  index="0" type="int" value="123"/>
+<constructor-arg index="1" type="java.lang.String" value="SMGCHAMP" />
+<bean>
 
+****************************************************************************************************************************************
+Class Example:
+public class Adress {
+	
+	String pinCode;
+	String State;
+	
+	public String getPinCode() {
+		return pinCode;
+	}
+	public void setPinCode(String pinCode) {
+		this.pinCode = pinCode;
+	}
+	public String getState() {
+		return State;
+	}
+	public void setState(String state) {
+		State = state;
+	}
+	@Override
+	public String toString() {
+		return "Adress [pinCode=" + pinCode + ", State=" + State + "]";
+	}
+}
+
+public class Employee {
+	Adress adress;
+
+	public Adress getAdress() {
+		return adress;
+	}
+
+	public void setAdress(Adress adress) {
+		this.adress = adress;
+	}
+
+	public void getCompleteDetails() {
+		System.out.println("Employee details\n" + "adress:"+adress.toString());
+	}
+
+}
+
+**********************************************************************************************************************************	
+Setter Injection:
+<bean id="adress1" class="Adress"> 
+	<property name="pinCode" value="560048"/> 
+	<property name="state" value="karnataka"/> 
+</bean>	
+               
+
+<bean id="employeeBean" class="Employee">
+	<property name="id" value="123456"/> 
+	<property name="name" value="RAM"/>  
+	<property name="adress" ref="adress1"/> 
+</bean>	
+ 
+Constructor Injection:
+<bean id="adress1" class="Adress"> 
+	<property name="pinCode" value="560048"/> 
+	<property name="state" value="karnataka"/> 
+</bean>	
+               
+<bean id="employeeBean" class="Employee">
+	<constructor-arg index="0" type="java.lang.String" value="123456" /> 
+	<constructor-arg index="1" type="java.lang.String" value="RAM" />
+	
+	<constructor-arg>
+	<ref bean="adress1"/>
+	</constructor-arg>
+</bean>		
+	
+Autowirwiring:
+<bean id="adress" class="Adress">
+	<property name="pinCode" value="560048" />
+	<property name="state" value="karnataka" />
+</bean>
+<bean id="employeeBean" class="Employee" autowire="byName">
+	<property name="adress" ref="adress1"></property> -->
+</bean>
