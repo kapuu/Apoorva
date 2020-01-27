@@ -1,0 +1,59 @@
+Two types of IOC:
+1. Bean Factory
+2. Application Context
+
+Bean Factory:
+Resource resource=new ClassPathResource("bean.xml");
+BeanFactory factory=new XmlBeanFactory(resource);
+ProductInfo product=(ProductInfo) factory.getBean("productBean");
+product.display();
+
+Application context:
+
+ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+ProductInfo product = (ProductInfo) context.getBean("productBean");
+product.display();
+
+
+Two types of Dependency Injection as provided by Spring IOC(Advantages: Loose coupling between classes):
+1. Setter Injection
+2. Construtor Injection
+
+XML:(Head):
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+</beans>
+For class:
+package ProductPackage;
+public class ProductInfo {
+	int Id;
+	String Name;
+	public int getId() {
+		return Id;
+	}
+	public void setId(int id) {
+		Id = id;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public void display() {
+		System.out.println("ID:"+Id+" "+"Name"+Name);
+	}
+}
+
+XML(Body):For set and get methods:
+<bean id="productBean" class="ProductPackage.ProductInfo"> 
+  <property name="Id" value="101"></property> 
+  <property name="Name" value="Redmi"></property> 
+</bean>
+
+
+
+
