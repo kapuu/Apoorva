@@ -1,0 +1,39 @@
+public class IterateDemo{
+ psvm(){
+ List<String> list = new ArrayList<String>
+ list.add("A");
+ 
+ //using For loop
+ for(int i=0; i<list.size();i++){
+  System.out.println(list.get(i));
+ }
+ 
+ //using While loop
+ while(i< list.size()){
+ System.out.println(list.get(i));
+ }
+ 
+ //new way loop
+ 
+ for(String k:list){
+ System.out.println(k);
+ }
+ 
+ //using iterator while loop
+ 
+ Iterator<String> iterator = list.iterator();
+ while(iterator.hasNext()){
+ System.out.println(iterator.next());
+ }
+ 
+ //using iterator while for loop
+ Iterator<String> iterator = list.iterator();
+ list.forEach((x)->{
+  System.out.println(x);
+ });
+ 
+ 
+  
+  
+ 
+  
