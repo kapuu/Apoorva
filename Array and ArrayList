@@ -28,3 +28,17 @@ public class Array {
 	}
 }
 
+
+Note:
+
+Methods: 
+add(value): appends value at the end of the list
+add(index,value)
+clear(): Removes all the element from the list
+indexof(value): -1 if not found
+get(index): Returns the value present at the given index
+remove(index): Shifts to left and removes the value
+set(index,value): Replaces value at the given index with given value.
+toString(): returns a string representation of the list such as "[1,2]"
+
+
