@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class sortarray {
+	public static void main(String args[]) {
+		ArrayList list =new ArrayList();
+		
+		//Add elements in arraylist
+		list.add("aaa");
+		list.add("ppp");
+		list.add("bbb");
+		
+		//Display list before sorting
+		System.out.println("ArrayList before sorting "+list);
+		
+		//Sorting of arraylist
+		Collections.sort(list);
+		
+		//Display list after sorting: In acending order
+		System.out.println("ArrayList before sorting "+list);
+		
+	    //Display list after sorting:In descending order
+		Collections.sort(list, Collections.reverseOrder()); 
+		System.out.println("ArrayList before sorting "+list);
+		}
+
+}
