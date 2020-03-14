@@ -1,0 +1,72 @@
+Hello World: Kotlin
+
+pgm1:
+We write main funcion in kotlin no need of kotlin classes.
+fun main(args: Array<String>){
+  println("Hello World")
+}
+
+pgm2:
+class class1 {
+    var name : String = "";
+}
+
+fun main(args: Array<String>){
+    println("Hello World")
+    var obj1= class1();
+    obj1.name= "Apoorva";
+    print("Name is: ${obj1.name}")
+}
+
+Programs: With Test Cases
+pgm3:
+import org.junit.Assert
+import kotlin.test.assertEquals
+import org.junit.Test as test
+
+@test fun main(args: Array<String>){
+    val first: Int = 10
+    val second: Int=20
+
+    val sum = first+second
+
+    println("The sum is: $sum")
+
+    Assert.assertEquals(sum, 40)
+
+}
+
+Programs: With Test Cases
+pgm4
+
+class class1 {
+    fun swap(): String {
+        var first = 1
+        var second = 2
+
+        var temp= first
+        first=second
+        second=temp
+        var obj : String = "$first $second"
+
+        return(obj)
+    }
+
+
+}
+
+import org.junit.Assert
+import kotlin.test.assertEquals
+import org.junit.Test as test
+
+@test fun main(args: Array<String>){
+    var obj1= class1()
+    var obj2 = obj1.swap()
+    print(obj2)
+    var obj3 : String = "2 1";
+    Assert.assertEquals(obj2, obj3)
+}
+
+
+
+
