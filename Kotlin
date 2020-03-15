@@ -67,6 +67,7 @@ import org.junit.Test as test
     Assert.assertEquals(obj2, obj3)
 }
 
+pgm 5
 Convert and write Java and kotlin file together:
 
 public class demo
@@ -89,12 +90,75 @@ fun main(args : Array<String>)
   print(obj.name)
 }
 
+pgm 6
+
+fun main(args : Array<String>)
+{
+  var num1 : Int = 4
+  var num2 : Int = 7
+  var result : Int = 0
+  
+  reuslt = if(num1>num2)
+  num1
+  else if(num1<num2)
+  num2
+  else
+  0
+  
+  println(result)
+}
+
+pgm 7
+fun main(args : Array<String>)
+{
+  var str1 : String = "Apoorva"
+  var str2 : String = "Karekal"
+  if(str1.equals(str2))
+  println("Same")
+  else
+  println("Not Same")
+}
 
 
+pgm 8
+class Demo{
+ var name: String? = null
+}
 
-
-   
-
-
-
-
+fun main(args : Array<String>)
+{
+  var obj: Demo? = Demo()
+  obj = null
+  print(obj?.name)
+ }
+ 
+ 
+ pgm 9
+ fun main(args : Array<String>)
+ {
+  var obj = TreeMap<String,Int>()
+  obj["Appu"]= 1
+  obj["Karekal"]= 2
+  
+  for((name, age) in obj)
+  {
+    println("$name : $age)
+  }
+ }
+ 
+ pgm 10
+ fun main(args : Array<String>)
+ {
+  var result = max(8,7)
+  println(result)
+ }
+ 
+ fun max(a : Int, b : Int) : Int
+ {
+  if(a>b)
+    return a
+  else
+    return b
+ }
+ 
+ 
