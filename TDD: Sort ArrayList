@@ -25,3 +25,62 @@ public class sortarray {
 		}
 
 }
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class sortarray {
+	
+public static List<String> myarray()    {
+	ArrayList<String> list = new ArrayList<String>();
+    list.add("aaa");
+	list.add("ppp");
+	list.add("bbb");
+	
+
+			
+	return(list);
+		
+	
+}
+
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	
+}
+
+}
+
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class sortarrayTest {
+	
+	
+
+
+	@Test
+	public void testMyArray() {
+		@Mock
+		sortarray m1=new sortarray();
+		List<String> result = m1.myarray();
+		
+		Assert.assertEquals("Elements has been added successfully",Arrays.asList("aaa", "ppp", "bbb"), result);
+		Assert.assertNotNull("List shouldn't be null", result);
+		Collections.sort(result);
+		Assert.assertEquals("Elements has been succesfully sorted in ascending order",Arrays.asList("aaa", "bbb", "ppp"),result);
+		Collections.sort(result, Collections.reverseOrder()); 
+		Assert.assertEquals("Elements has been succesfully sorted in descending order",Arrays.asList("ppp", "bbb", "aaa"), result);
+		
+	}
+}
+
