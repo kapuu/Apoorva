@@ -67,6 +67,34 @@ import org.junit.Test as test
     Assert.assertEquals(obj2, obj3)
 }
 
+Convert and write Java and kotlin file together:
+
+public class demo
+{ 
+  private String name;
+  
+  public String getName(){
+    return name;
+  }
+  
+  public void setName(String name){
+    this.name=name;
+  }
+}
+
+fun main(args : Array<String>)
+{
+  var obj = demo();
+  obj.name = "Appu"
+  print(obj.name)
+}
+
+
+
+
+
+   
+
 
 
 
