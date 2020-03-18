@@ -1,0 +1,131 @@
+Program 1: Swapping
+
+import org.junit.Assert
+import kotlin.test.assertEquals
+import org.junit.Test as test
+
+@test fun main(args: Array<String>){
+    var obj1= class1()
+    var obj2 = obj1.swap()
+    print(obj2)
+    var obj3 : String = "2 1";
+    Assert.assertEquals(obj2, obj3)
+}
+
+
+class class1 {
+    fun swap(): String {
+        var first = 1
+        var second = 2
+
+        var temp= first
+        first=second
+        second=temp
+        var obj : String = "$first $second"
+
+        return(obj)
+    }
+
+
+}
+
+Program 2: Find Ascii value of a character
+
+
+class class1 {
+    fun sum(): Int {
+        val first: Int = 10
+        val second: Int = 20
+
+        val sum = first+second
+
+        return(sum)
+    }
+
+}
+
+
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= class1()
+    var obj2 = obj1.sum()
+    print(obj2)
+
+
+    Assert.assertEquals(30, obj2)
+    }
+
+
+program 3: Compute Quotient
+class class1 {
+    fun compute_Quotient(): Int {
+
+        val dividend = 25
+        val divisor = 4
+
+        val quotient = dividend/divisor
+        return(quotient)
+    }
+
+}
+
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= class1()
+    var obj2 = obj1.compute_Quotient()
+    print(obj2)
+
+   Assert.assertEquals(6, obj2)
+}
+
+
+program 4: Even_Odd
+class class1 {
+    fun evev_odd(): String {
+
+        print("Enter a number: ")
+        val num = 10
+
+        if (num % 2 == 0)
+            return("$num is even")
+        else
+            return("$num is odd")
+
+
+    }
+
+}
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= class1()
+    var obj2 = obj1.evev_odd()
+    print(obj2)
+
+   Assert.assertEquals("10 is even", obj2)
+}
+
+
+program 5: 
