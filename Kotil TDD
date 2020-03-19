@@ -384,4 +384,49 @@ class Class1 {
 
 Program 11: Display Fibonacci series using for loop
 
+import org.junit.Assert
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.Fibonacci(10)
+    print(obj2)
+
+    Assert.assertEquals("0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 + 34 + kotlin.Unit ", obj2)
+}
+
+
+
+class Class1 {
+
+    fun Fibonacci(n: Int): {
+
+        var i = 1
+        var t1 = 0
+        var t2 = 1
+        var output = 0
+
+        //print("First $n terms: ")
+
+        while (i <= n) {
+            print("$t1 + ")
+            val sum = t1 + t2
+            t1 = t2
+            t2 = sum
+
+            i++
+        }
+
+    }
+}
+
+
+
+
+
+
 
