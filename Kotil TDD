@@ -128,4 +128,260 @@ import org.junit.Test as test
 }
 
 
-program 5: 
+program 5: vowel_consonant
+class class1 {
+    fun vowel_consonant(): String {
+
+        val ch = 'i'
+
+        val vowelConsonant = if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') "vowel" else "consonant"
+
+       return("$ch is $vowelConsonant")
+    }
+
+}
+
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= class1()
+    var obj2 = obj1.vowel_consonant()
+    print(obj2)
+
+   Assert.assertEquals("i is vowel", obj2)
+}
+
+program 6: Find the Largesst of three Number
+class class1 {
+    fun Find_Large_Number(): String {
+
+        val n1 = -4.5
+        val n2 = 3.9
+        val n3 = 2.5
+
+        if (n1 >= n2 && n1 >= n3)
+            return("$n1 is the largest number.")
+        else if (n2 >= n1 && n2 >= n3)
+            return("$n2 is the largest number.")
+        else
+            return("$n3 is the largest number.")
+
+    }
+
+}
+
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= class1()
+    var obj2 = obj1.Find_Large_Number()
+    print(obj2)
+
+   Assert.assertEquals("3.9 is the largest number.", obj2)
+}
+
+program 7: Find Roots of a Quadratic Equation
+
+class Class1 {
+    fun Quadratic_Equation(): String {
+
+        val a = 2.3
+        val b = 4
+        val c = 5.6
+        val root1: Double
+        val root2: Double
+        val output: String
+
+        val determinant = b * b - 4.0 * a * c
+
+        // condition for real and different roots
+        if (determinant > 0) {
+            root1 = (-b + Math.sqrt(determinant)) / (2 * a)
+            root2 = (-b - Math.sqrt(determinant)) / (2 * a)
+
+            output = "root1 = %.2f and root2 = %.2f".format(root1, root2)
+            return(output)
+        }
+        // Condition for real and equal roots
+        else if (determinant == 0.0) {
+            root2 = -b / (2 * a)
+            root1 = root2
+
+            output = "root1 = root2 = %.2f;".format(root1)
+            return(output)
+        }
+        // If roots are not real
+        else {
+            val realPart = -b / (2 * a)
+            val imaginaryPart = Math.sqrt(-determinant) / (2 * a)
+
+            output = "root1 = %.2f+%.2fi and root2 = %.2f-%.2fi".format(realPart, imaginaryPart, realPart, imaginaryPart)
+            return(output)
+        }
+
+    }
+
+}
+
+
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.Quadratic_Equation()
+    print(obj2)
+
+   Assert.assertEquals("root1 = -0.87+1.30i and root2 = -0.87-1.30i", obj2)
+}
+
+program 8: Find the Leap Year
+
+class Class1 {
+    fun Leap_Year(): String {
+        val year = 1900
+        var leap = false
+
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                // year is divisible by 400, hence the year is a leap year
+                leap = year % 400 == 0
+            } else
+                leap = true
+        } else
+            leap = false
+
+        return(if (leap) "$year is a leap year." else "$year is not a leap year.")
+    }
+}
+
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.Leap_Year()
+    print(obj2)
+
+   Assert.assertEquals("1900 is not a leap year", obj2)
+}
+
+program 9: Find Positive or Negative Number
+class Class1 {
+    fun Negative_Positive(): String {
+        val number = 12.3
+
+        if (number < 0.0)
+            return("$number is a negative number.")
+        else if (number > 0.0)
+            return("$number is a positive number.")
+        else
+            return("$number is 0.")
+    }
+}
+
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.Negative_Positive()
+    print(obj2)
+
+    Assert.assertEquals("12.3 is a positive number.", obj2)
+}
+
+Program 10: 
+import org.junit.Assert
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.alphabet()
+    print(obj2)
+
+    Assert.assertEquals("* is not an alphabet..", obj2)
+}
+
+class Class1 {
+    fun alphabet(): String {
+        val c = '*'
+
+        if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+            return("$c is an alphabet.")
+        else
+            return("$c is not an alphabet.")
+    }
+}
+
+Program 10:Find Factorial of a number using for loop
+
+import org.junit.Assert
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.factorial()
+    print(obj2)
+
+    Assert.assertEquals("Factorial of 10 = 3628800", obj2)
+}
+
+class Class1 {
+    fun factorial(): String {
+        val num = 10
+        var factorial: Long = 1
+        for (i in 1..num) {
+            // factorial = factorial * i;
+            factorial *= i.toLong()
+        }
+        return("Factorial of $num = $factorial")
+
+    }
+}
+
+Program 11: Display Fibonacci series using for loop
+
+
