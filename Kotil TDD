@@ -424,6 +424,148 @@ class Class1 {
     }
 }
 
+program 12: HCF
+
+class Class1 {
+
+    fun hcf(n1: Int, n2: Int): String  {
+
+
+        val n3 = n1 % n2
+
+        if (n2 != 0)
+            return("$n2, $n3")
+        else
+            return("$n1")
+
+    }
+}
+
+
+import org.junit.Assert
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+    val n1 = 366
+    val n2 = 60
+
+    var obj1= Class1()
+    var obj2 = obj1.hcf(n1,n2)
+    print(obj2)
+
+    Assert.assertEquals("60, 6", obj2)
+}
+
+
+program 13: Convert String to Date using pattern formatters
+
+import org.junit.Assert
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.date()
+    print(obj2)
+
+   Assert.assertEquals("2017-07-25", obj2)
+}
+
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+
+class Class1 {
+
+    fun date(): LocalDate  {
+
+        val string = "July 25, 2017"
+
+        val formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH)
+        val date = LocalDate.parse(string, formatter)
+
+        return(date)
+
+    }
+}
+
+
+
+program 14: Kotlin Program to Find Largest Element in an Array
+
+import org.junit.Assert
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.Large_Array()
+    print(obj2)
+
+   Assert.assertEquals("55.50", obj2)
+}
+
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+
+class Class1 {
+
+    fun Large_Array(): String  {
+
+        val numArray = doubleArrayOf(23.4, -34.5, 50.0, 33.5, 55.5, 43.7, 5.7, -66.5)
+        var largest = numArray[0]
+
+        for (num in numArray) {
+            if (largest < num)
+                largest = num
+        }
+
+        return("Largest element = %.2f".format(largest))
+    }
+}
+
+
+Program 15:Convert Array to Set
+import org.junit.Assert
+import kotlin.test.assertEquals
+import kotlin.test.fail
+import org.junit.Test as test
+
+@test fun main(args: Array<String>) {
+
+
+    var obj1= Class1()
+    var obj2 = obj1.Array_Set()
+    print(obj2)
+
+   Assert.assertEquals("Set: [a, b, c]", obj2)
+}
+
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+
+class Class1 {
+
+    fun Array_Set(): String {
+
+            val array = arrayOf("a", "b", "c")
+            val set = HashSet(Arrays.asList(*array))
+
+            return ("Set: $set")
+    }
+}
+
 
 
 
