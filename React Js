@@ -1,0 +1,76 @@
+Program 1:
+class conditionStyle extends React.Component{
+	render(){
+		return(
+			<div style ={{ color: Math.random() < 0.5? 'green': 'red'}}>
+				How do you like this?
+			</div>
+		);
+	}
+}
+
+ReactDoM.render(
+	<conditionStyle />,
+}
+
+program 2:
+class App extends React.Component{
+	render()(
+		return(
+		<div>
+			<div className="header">{this.props.title}</div>
+		<div>
+		);
+	)
+}
+
+ReactDOM.render(
+	<App title="The GitHub Cards App"/>,
+)
+
+program 3:
+Props Example: It can be used to access value outside the class, and for State it can be accessed only inside class.
+
+const testData = [
+	{ name: Apoorva, company: 'SGGSC'},
+	{ name: Akshatha, company: 'SLK'},
+];
+
+const CardList = (props) => (
+	<div>
+	 {testData.map(profile => <Card {...profile}/>)}
+	</div>
+);
+
+class Card extends Reacr.Component{
+	render(){
+	 const profile = this.props;
+	 return(
+		<div className= "info">
+			<div className="name"> {profile.name} </div>
+			<div className="name"> {profile.company} </div>
+		</div>
+	  );
+	}
+}
+
+program 4:
+class Car extends React.Component {
+ constructor(props){
+  super(props);
+  this.state = {
+   brand: "Ford",
+   model: "Mustang",
+   color: "red",
+   year: 1964
+   };
+  }
+  render(){
+   return(
+    <div>
+	 <h1> My {this.state.brand} </h1>
+	</div>
+   );
+  }
+}
+ 
